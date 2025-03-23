@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AniWatch Clone</title>
+    <link rel="stylesheet" href="Style.css">
+    <style>
+        body {
+            background: #121212;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 20px;
+            background: black;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px;
+        }
+        .left-content {
+            flex: 1;
+            text-align: center;
+        }
+        .logo img {
+            width: 75%;
+            height: auto;
+            display: block;
+            margin: 0 auto 20px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .logo:hover img {
+            transform: scale(1.1);
+        }
+        .search-box {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 120%;
+            max-width: 600%; /* Limits width for better spacing */
+            margin: 0 auto;
+        }
+        .search-box input {
+            flex: 1;
+            padding: 15px;
+            font-size: 20px;
+            border-radius: 5px 0 0 5px;
+            border: none;
+            width: 100%;
+        }
+        .search-box button {
+            padding: 15px 40px; /* Bigger button */
+            background: #f5c518;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            font-size: 22px;
+            font-weight: bold;
+            width: 20%;
+        }
+        .top-search {
+            margin-top: 10px;
+            font-size: 16px;
+        }
+        .anime-characters {
+            flex: 1;
+            text-align: right;
+        }
+        .anime-characters img {
+            width: 70%;
+        }
+        .view-site {
+            display: block;
+            margin: 50px auto;
+            padding: 20px 40px;
+            font-size: 20px;
+            background: #f5c518;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="#">Most Popular</a></li>
+                <li><a href="#">Top Airing</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="left-content">
+                <div class="logo">
+                    <img src="dark logo.png" alt="Logo">
+                </div>
+                <div class="search-box">
+                    <input type="text" placeholder="Search anime...">
+                    <button>&#128269;</button>
+                </div>
+                <p class="top-search"><strong>Top search:</strong> Solo Leveling, One Piece, Attack on Titan, Blue Lock...</p>
+            </div>
+            <div class="anime-characters">
+                <img src="https://aniwatchtv.to/images/anw-min.webp" alt="Anime Characters">
+            </div>
+        </div>
+    </main>
+    <footer>
+        <button class="view-site"><a href= homepage.html> View Full Site</a></button>
+    </footer>
+</body>
+</html>

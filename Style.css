@@ -1,0 +1,175 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background: linear-gradient(90deg, #0d0c0d, #121212);
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.anime-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.anime-card {
+    background: #1e1e1e;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(255, 117, 140, 0.1);
+    transform-style: preserve-3d;
+}
+
+.anime-card:hover {
+    transform: scale(1.05) rotateX(5deg) rotateY(5deg);
+    box-shadow: 0 10px 20px rgba(255, 117, 140, 0.3);
+}
+
+.anime-card img {
+    width: 100%;
+    height: 80%;
+    border-bottom: 2px solid #ff758c;
+}
+
+.anime-card h3 {
+    text-align: center;
+    padding: 10px;
+}
+
+/* Anime Card Button */
+.anime-card .watch-button {
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    padding: 10px;
+    text-align: center;
+    background-color: #ff758c;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.anime-card .watch-button:hover {
+    background-color: #ff4a6e;
+    box-shadow: 0 0 10px rgba(255, 74, 110, 0.6);
+}
+
+/* Logo */
+.logo {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.logo img {
+    width: 80%;
+    height: 300px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo:hover img {
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #222;
+    margin-top: 20px;
+    font-size: 14px;
+    border-top: 2px solid #ff758c;
+    box-shadow: 0 -4px 10px rgba(255, 117, 140, 0.1);
+}
+
+/* Light Mode Styles */
+.light-mode {
+    background-color: #ffffff;
+    color: #121212;
+}
+
+.light-mode .anime-card {
+    background: #f0f0f0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.light-mode header,
+.light-mode footer {
+    background: #ddd;
+    color: #121212;
+    border-top: 2px solid #ff758c;
+}
+
+.light-mode .watch-button {
+    background-color: #ff4a6e;
+    color: #ffffff;
+}
+
+.light-mode .watch-button:hover {
+    background-color: #ff758c;
+    box-shadow: 0 0 10px rgba(255, 74, 110, 0.6);
+}
+
+/* Button Styles */
+#theme-toggle {
+    background-color: #ff758c;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    position: fixed; /* Fix the button position */
+    top: 20px; /* Distance from the top */
+    right: 20px; /* Distance from the right */
+    z-index: 1000; /* Ensure it appears on top of other elements */
+    display: inline-block;
+    text-align: center;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 8px rgba(255, 117, 140, 0.2);
+}
+
+#theme-toggle:hover {
+    background-color: #ff4a6e;
+    box-shadow: 0 10px 20px rgba(255, 74, 110, 0.3);
+    transform: scale(1.1);
+}
+
+#theme-toggle:active {
+    background-color: #e84e67;
+    box-shadow: 0 2px 5px rgba(255, 74, 110, 0.4);
+}
+
+/* Animated effect on theme toggle */
+#theme-toggle {
+    animation: slide-in 0.5s ease-out forwards;
+}
+
+@keyframes slide-in {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
