@@ -1,4 +1,3 @@
-/* General Styles */
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #121212;
@@ -7,7 +6,7 @@ body {
     padding: 0;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 100vh; /* Ensure body takes full viewport height */
 }
 
 header {
@@ -98,7 +97,69 @@ footer {
     box-shadow: 0 -4px 10px rgba(255, 117, 140, 0.1);
 }
 
-/* Light Mode Styles */
+.anime-card .hover-image {
+    width: 100%;
+    height: 80%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.4s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background: #333;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    flex: 1;
+    justify-content: space-between; 
+}
+
+/* Changes applied here */
+.top-section {
+    display: flex;
+    align-items: center; /* Keeps poster and title aligned */
+    gap: 40px; /* Adds spacing between poster and text */
+}
+
+.poster img {
+    width: 70%; /* Makes the poster bigger */
+    max-width: 900px; /* Prevents it from being too large */
+    border-radius: 10px;
+}
+
+.content {
+    margin: auto;
+    flex: 1;
+}
+
+.buttons {
+    margin: 10px 0;
+}
+
+.watch-now {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Video stays below and takes full width */
+.video-container {
+    width: 100%;
+    margin: 20px; /* Adds spacing between top section and video */
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 500px; /* Ensures good height for visibility */
+    border-radius: 10px;
+}
+
+/* Light Mode */
 .light-mode {
     background-color: #ffffff;
     color: #121212;
@@ -109,7 +170,7 @@ footer {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.light-mode header,
+.light-mode header, 
 .light-mode footer {
     background: #ddd;
     color: #121212;
@@ -126,7 +187,7 @@ footer {
     box-shadow: 0 0 10px rgba(255, 74, 110, 0.6);
 }
 
-/* Button Styles */
+/* Theme Toggle Button (Fixed & Animated) */
 #theme-toggle {
     background-color: #ff758c;
     color: white;
@@ -158,7 +219,7 @@ footer {
     box-shadow: 0 2px 5px rgba(255, 74, 110, 0.4);
 }
 
-/* Animated effect on theme toggle */
+/* Button Animation */
 #theme-toggle {
     animation: slide-in 0.5s ease-out forwards;
 }
